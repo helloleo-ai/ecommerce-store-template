@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
+import { fetchProductById } from '../services/mockData';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import ProductCarousel from '../components/ProductCarousel';
@@ -57,11 +58,9 @@ const Description = styled.p`
 const ProductDetail = () => {
   const { id } = useParams();
   
-  const { data: product, isLoading } = useQuery(['product', id], async () => {
-    // Replace with your actual API endpoint
-    const response = await fetch(`/api/products/${id}`);
-    return response.json();
-  });
+  const { data: product, isLoading } = useQuery(['product', id], () => 
+    fetchProductById(id)
+  );
 
   if (isLoading) return <div>Loading...</div>;
 

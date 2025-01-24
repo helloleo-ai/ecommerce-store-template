@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import { fetchProducts } from '../services/mockData';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -67,11 +68,9 @@ const SortButton = styled.button`
 const Products = () => {
   const [sortBy, setSortBy] = React.useState('popularity');
   
-  const { data: products, isLoading } = useQuery(['products', sortBy], async () => {
-    // Replace with your actual API endpoint
-    const response = await fetch(`/api/products?sort=${sortBy}`);
-    return response.json();
-  });
+  const { data: products, isLoading } = useQuery(['products', sortBy], () => 
+    fetchProducts(sortBy)
+  );
 
   if (isLoading) return <div>Loading...</div>;
 
