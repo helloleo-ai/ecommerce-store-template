@@ -9,10 +9,23 @@ const HeroSection = styled.section`
   min-height: 600px;
   display: flex;
   align-items: center;
-  background: var(--gradient);
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: var(--spacing-xl);
+  background-image: url('https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(42, 42, 42, 0.7);
+    z-index: 1;
+  }
 `;
 
 const Content = styled.div`
@@ -25,6 +38,7 @@ const Title = styled(motion.h1)`
   font-size: 3.5em;
   margin-bottom: var(--spacing-md);
   line-height: 1.1;
+  color: white;
 
   @media (max-width: 768px) {
     font-size: 2.5em;
@@ -33,7 +47,7 @@ const Title = styled(motion.h1)`
 
 const Subtitle = styled(motion.p)`
   font-size: 1.2em;
-  color: var(--secondary);
+  color: var(--accent);
   margin-bottom: var(--spacing-lg);
 `;
 
