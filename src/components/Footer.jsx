@@ -6,7 +6,7 @@ const FooterContainer = styled.footer`
   background: var(--primary);
   color: var(--background);
   padding: var(--spacing-xl) 0;
-  margin-top: var(--spacing-xl);
+  margin-top: calc(var(--spacing-xl) * 2);
 `;
 
 const FooterContent = styled.div`

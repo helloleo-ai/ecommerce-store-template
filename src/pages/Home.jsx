@@ -11,7 +11,7 @@ const HomeContainer = styled.div`
 `;
 
 const Section = styled.section`
-  margin: var(--spacing-xl) 0;
+  margin: calc(var(--spacing-xl) * 2) 0;
 `;
 
 const Grid = styled.div`

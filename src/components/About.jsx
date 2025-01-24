@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const AboutSection = styled.section`
-  margin: var(--spacing-xl) 0;
-  padding: var(--spacing-xl);
+  margin: calc(var(--spacing-xl) * 2) 0;
+  padding: calc(var(--spacing-xl) * 1.5);
   background: var(--gradient);
   border-radius: var(--radius);
 `;

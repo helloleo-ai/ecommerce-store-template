@@ -6,7 +6,7 @@ import { useQuery } from 'react-query';
 import { fetchProducts } from '../services/mockData';
 
 const Container = styled.section`
-  margin: var(--spacing-xl) 0;
+  margin: calc(var(--spacing-xl) * 2) 0;
 `;
 
 const Grid = styled.div`

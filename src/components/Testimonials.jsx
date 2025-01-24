@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const TestimonialsSection = styled.section`
-  margin: var(--spacing-xl) 0;
+  margin: calc(var(--spacing-xl) * 2) 0;
 `;
 
 const Grid = styled.div`
