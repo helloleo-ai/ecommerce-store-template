@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Hero from '../components/Hero';
 import FeaturedProducts from '../components/FeaturedProducts';
+import About from '../components/About';
+import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer';
 
 const HomeContainer = styled.div`
   min-height: 100vh;
@@ -36,26 +39,32 @@ const FeatureIcon = styled.div`
 
 const Home = () => {
   return (
-    <HomeContainer>
-      <Hero />
-      <FeaturedProducts />
-      
-      <Section>
-        <h2>Why Choose Us</h2>
-        <Grid>
-          <Feature>
-            <FeatureIcon>🚚</FeatureIcon>
-            <h3>Free Shipping</h3>
-            <p>On orders over $100</p>
-          </Feature>
-          <Feature>
-            <FeatureIcon>⭐</FeatureIcon>
-            <h3>Premium Quality</h3>
-            <p>Curated products from top brands</p>
-          </Feature>
-        </Grid>
-      </Section>
-    </HomeContainer>
+    <>
+      <HomeContainer>
+        <Hero />
+        <FeaturedProducts />
+        
+        <Section>
+          <h2>Why Choose Us</h2>
+          <Grid>
+            <Feature>
+              <FeatureIcon>🚚</FeatureIcon>
+              <h3>Free Shipping</h3>
+              <p>On orders over $100</p>
+            </Feature>
+            <Feature>
+              <FeatureIcon>⭐</FeatureIcon>
+              <h3>Premium Quality</h3>
+              <p>Curated products from top brands</p>
+            </Feature>
+          </Grid>
+        </Section>
+        
+        <About />
+        <Testimonials />
+      </HomeContainer>
+      <Footer />
+    </>
   );
 };
 
