@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import LoadingSpinner from '../components/LoadingSpinner';
 import { fetchProducts } from '../services/mockData';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -72,7 +73,7 @@ const Products = () => {
     fetchProducts(sortBy)
   );
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <LoadingSpinner />;
 
   return (
     <div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
+import LoadingSpinner from '../components/LoadingSpinner';
 import { fetchProductById } from '../services/mockData';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -62,7 +63,7 @@ const ProductDetail = () => {
     fetchProductById(id)
   );
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <LoadingSpinner />;
 
   const priceHistoryData = [
     { date: '2024-01', price: 299 },
