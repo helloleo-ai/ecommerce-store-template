@@ -7,5 +7,12 @@ export default defineConfig({
     rollupOptions: {
       input: './index.html'
     }
+  },
+  server: {
+    host: true,
+    allowedHosts: [
+      true
+    ]
   }
+
 })
